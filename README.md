@@ -37,10 +37,9 @@ The Nikto Platform is a collection of tools built to work in the most automated 
 More tools and automations are planned.
 
 - Bustah — Content-discovery / directory brute for the platform. Wordlist-driven recursion with soft-404 handling, seeding from crawl/Nikto, and results on a shared host sitemap. The platform's inspection engine will run against new results.
-
+- CMS Explorer redux (scan & find 0days on WordPress (first), Drupal (second), etc.
 - JWT analysis
-
-[ ] `PostMessage()` testing
+- `PostMessage()` testing
 
 
 
