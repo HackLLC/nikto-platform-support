@@ -29,7 +29,7 @@ Run `./update.sh` whenever you want the latest version.
 File issues (you must be signed in to the GitHub account you were granted access with):
 https://github.com/hackllc/nikto-platform-support/issues
 
-## Tools
+# Tools
 The Nikto Platform is a collection of tools built to work in the most automated fashion possible, and then take exploits further down an automated path. Nikto currently is two tools:
 
 - Nikto — Broad web-server vulnerability scanner -- port of the Perl program. Probes for known misconfigs, outdated software, interesting paths, and insecure headers, then turns hits into findings and host context for the rest of the platform.
@@ -45,7 +45,7 @@ The Nikto Platform is a collection of tools built to work in the most automated 
   - Do API and secret key extraction (via [Titus](https://github.com/praetorian-inc/titus))
   - Planned: Check for indexing on all paths
 
-More tools and automations are planned.
+More tools and automations are planned:
 
 - Bustah — Content-discovery / directory brute for the platform. Wordlist-driven recursion with soft-404 handling, seeding from crawl/Nikto, and results on a shared host sitemap. The platform's inspection engine will run against new results.
 - CMS Explorer redux (scan & find 0days on WordPress (first), Drupal (second), etc.
