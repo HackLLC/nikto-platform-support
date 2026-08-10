@@ -1,3 +1,10 @@
+# Goals
+- Modernize the Nikto scanner
+- Build a platform for new interoperable tools
+- Develop better tools for specific exploits
+- Provide "missing ui" or "missing automation" to common tools and processes
+- Modernize old tools besides Nikto (e.g., PadBuster)
+
 # Setup
 
 ## Requirements
@@ -30,6 +37,8 @@ The Nikto Platform is a collection of tools built to work in the most automated 
 - LFIC (Local File Inclusion Commander) — Once a target has a confirmed LFI/path traversal, LFIC turns that bug into a bulk file-retrieval engine. You configure the vulnerable request, pick modules/filesets to pull, and browse/download what came back in a host-scoped file tree (with extractors peeling real file content out of hostile responses).
 
 - Recommendation engine - Pops suggestions for work outside of the Nikto Platform, or scan suggestions for work not run yet in the platform (future)
+
+- MS10-70 - Modern, fast scanner for old issue with full exploit capability (in Nikto) to replace the old PadBuster.pl
 
 - Crawler - currently a limited crawl which will:
   - Catalog Javascript included (with outdated/vuln checking)
