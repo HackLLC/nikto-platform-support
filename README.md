@@ -29,6 +29,8 @@ The Nikto Platform is a collection of tools built to work in the most automated 
 
 - LFIC (Local File Inclusion Commander) — Once a target has a confirmed LFI/path traversal, LFIC turns that bug into a bulk file-retrieval engine. You configure the vulnerable request, pick modules/filesets to pull, and browse/download what came back in a host-scoped file tree (with extractors peeling real file content out of hostile responses).
 
+- Recommendation engine - Pops suggestions for work outside of the Nikto Platform, or scan suggestions for work not run yet in the platform (future)
+
 - Crawler - currently a limited crawl which will:
   - Catalog Javascript included (with outdated/vuln checking)
   - Do API and secret key extraction (via [Titus](https://github.com/praetorian-inc/titus))
