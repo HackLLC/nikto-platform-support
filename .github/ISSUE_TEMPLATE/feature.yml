@@ -1,0 +1,23 @@
+name: Feature request
+description: Suggest an improvement or a new capability.
+labels: [enhancement]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Filled in automatically when you use "Report an issue" in the console. Otherwise, copy it from Settings > License > Platform version.
+      placeholder: "API v0.1.0-beta.1 (abc123) · UI v0.1.0-beta.1 (abc123)"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The problem or task, not the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?

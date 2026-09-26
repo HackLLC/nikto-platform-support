@@ -1,0 +1,39 @@
+name: Bug
+description: Something in the console or a scan doesn't work.
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Filled in automatically when you use "Report an issue" in the console. Otherwise, copy it from Settings > License > Platform version.
+      placeholder: "API v0.1.0-beta.1 (abc123) · UI v0.1.0-beta.1 (abc123)"
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Host system
+      description: Operating system and how you installed (launcher or zip).
+      placeholder: "macOS 15 (Apple silicon), launcher"
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you did, what you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Optional. Remove hostnames, credentials or anything else you can't share.
+      render: shell

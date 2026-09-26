@@ -1,0 +1,35 @@
+name: Install or update problem
+description: The product won't install, start, update, or reach the console.
+labels: [install]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Filled in automatically when you use "Report an issue" in the console. If the console won't open, give the release you downloaded (e.g. v0.1.0-beta.1).
+      placeholder: "API v0.1.0-beta.1 (abc123) · UI v0.1.0-beta.1 (abc123)"
+
+  - type: input
+    id: platform
+    attributes:
+      label: Host system
+      description: Operating system and how you installed (launcher or zip).
+      placeholder: "macOS 15 (Apple silicon), launcher"
+  - type: input
+    id: docker
+    attributes:
+      label: Docker version
+      description: Output of `docker version --format '{{.Server.Version}}'` and `docker compose version`.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: The command you ran and the error you saw.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Output
+      description: Paste the command output. For the API, `docker logs nikto-api --tail 100`.
+      render: shell
