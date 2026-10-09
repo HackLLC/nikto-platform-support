@@ -1,1 +1,8 @@
 blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability in Nikto Platform
+    url: https://github.com/hackllc/nikto-platform-support/security/advisories/new
+    about: Privately, not as a public issue. Only you and Hack LLC can see it. See SECURITY.md.
+  - name: Documentation
+    about: Full docs ship with the product — open the console and use Help. Commands, scan options, engines, troubleshooting.
+    url: https://github.com/hackllc/nikto-platform-support#documentation

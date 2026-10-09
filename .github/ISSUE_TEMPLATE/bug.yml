@@ -2,6 +2,16 @@ name: Bug
 description: Something in the console or a scan doesn't work.
 labels: [bug]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue will be public.** Do not paste target hostnames, URLs, IP
+        addresses, credentials, session tokens or customer data. Describe the
+        shape of the problem instead, and replace identifiers with
+        `example.com` / `10.0.0.1`.
+
+        Found a vulnerability in Nikto Platform itself? Do not file it here —
+        [report it privately](https://github.com/hackllc/nikto-platform-support/security/advisories/new).
   - type: input
     id: version
     attributes:
@@ -14,8 +24,8 @@ body:
     id: platform
     attributes:
       label: Host system
-      description: Operating system and how you installed (launcher or zip).
-      placeholder: "macOS 15 (Apple silicon), launcher"
+      description: Operating system and architecture of the machine running the platform.
+      placeholder: "macOS 15 (Apple silicon)"
   - type: textarea
     id: what-happened
     attributes:
@@ -35,5 +45,13 @@ body:
     id: logs
     attributes:
       label: Logs or screenshots
-      description: Optional. Remove hostnames, credentials or anything else you can't share.
+      description: Optional. Remove hostnames, credentials or anything else you can't share. `nikto-launcher support-bundle` collects diagnostics with secrets redacted — review it before attaching.
       render: shell
+  - type: checkboxes
+    id: redacted
+    attributes:
+      label: Before you submit
+      options:
+        - label: I removed target hostnames, IPs, credentials and customer data from everything above.
+          required: true
+

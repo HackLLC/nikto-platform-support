@@ -2,6 +2,16 @@ name: False positive
 description: A finding was reported that isn't real.
 labels: [false-positive]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue will be public.** Do not paste target hostnames, URLs, IP
+        addresses, credentials, session tokens or customer data. Describe the
+        shape of the problem instead, and replace identifiers with
+        `example.com` / `10.0.0.1`.
+
+        Found a vulnerability in Nikto Platform itself? Do not file it here —
+        [report it privately](https://github.com/hackllc/nikto-platform-support/security/advisories/new).
   - type: input
     id: version
     attributes:
@@ -17,6 +27,12 @@ body:
       description: As shown in the Findings list.
     validations:
       required: true
+  - type: input
+    id: target-software
+    attributes:
+      label: Target software
+      description: What the target runs, not who it is — the Server header, framework, or CMS and version.
+      placeholder: "nginx 1.24, WordPress 6.6"
   - type: textarea
     id: why-wrong
     attributes:
@@ -28,5 +44,13 @@ body:
     id: evidence
     attributes:
       label: Request and response
-      description: Optional but very helpful. From the finding's evidence panes. Redact anything sensitive.
+      description: Optional but very helpful. From the finding's evidence panes. Replace the host with `example.com` and drop cookies and auth headers.
       render: http
+  - type: checkboxes
+    id: redacted
+    attributes:
+      label: Before you submit
+      options:
+        - label: I removed target hostnames, IPs, credentials and customer data from everything above.
+          required: true
+

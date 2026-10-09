@@ -2,24 +2,39 @@ name: Install or update problem
 description: The product won't install, start, update, or reach the console.
 labels: [install]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue will be public.** Do not paste target hostnames, URLs, IP
+        addresses, credentials, session tokens or customer data. Describe the
+        shape of the problem instead, and replace identifiers with
+        `example.com` / `10.0.0.1`.
+
+        Found a vulnerability in Nikto Platform itself? Do not file it here —
+        [report it privately](https://github.com/hackllc/nikto-platform-support/security/advisories/new).
   - type: input
     id: version
     attributes:
       label: Version
-      description: Filled in automatically when you use "Report an issue" in the console. If the console won't open, give the release you downloaded (e.g. v0.1.0-beta.1).
-      placeholder: "API v0.1.0-beta.1 (abc123) · UI v0.1.0-beta.1 (abc123)"
-
+      description: The release you downloaded, or Settings > License > Platform version if the console opens.
+      placeholder: "v0.1.0-beta.1"
+    validations:
+      required: true
   - type: input
     id: platform
     attributes:
       label: Host system
-      description: Operating system and how you installed (launcher or zip).
-      placeholder: "macOS 15 (Apple silicon), launcher"
+      description: Operating system, architecture, and which launcher file you downloaded.
+      placeholder: "macOS 15 (Apple silicon), nikto-launcher-macos-arm64"
+    validations:
+      required: true
   - type: input
     id: docker
     attributes:
       label: Docker version
       description: Output of `docker version --format '{{.Server.Version}}'` and `docker compose version`.
+    validations:
+      required: true
   - type: textarea
     id: what-happened
     attributes:
@@ -33,3 +48,11 @@ body:
       label: Output
       description: Paste the command output. For the API, `docker logs nikto-api --tail 100`.
       render: shell
+  - type: checkboxes
+    id: redacted
+    attributes:
+      label: Before you submit
+      options:
+        - label: I removed target hostnames, IPs, credentials and customer data from everything above.
+          required: true
+
